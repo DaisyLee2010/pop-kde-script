@@ -1,30 +1,89 @@
-## pop-kde-script
-A Simple script to move pop_OS 22.04 from Gnome to KDE Plasma
+# pop-kde-script
 
+[System76]: https://system76.com/
+[Pop!_OS]: https://pop.system76.com/
+[KDE]: https://kde.org/
+[virt-manager]: https://virt-manager.org/
 
-Please make sure your system is up to date before installing.
+An experimental script to switch [System76]'s [Pop!_OS] Linux 22.04 to [KDE].
 
-# Steps
+The default Pop!_OS desktop is a heavily customized version of Gnome. This script replaces it
+with the latest KDE Plasma available in the Ubuntu repositories (5.24). For a more recent version,
+please see [Later KDE Versions](#later-kde-versions) below.
 
-1. Download the script
-2. Open terminal and cd to directory you downloaded it to
-3. Run script
-4. (You may have to hard reset your computer as once gdm is removed the screen goes black. I would wait just a couple of minutes past where the screen goes black)
+## Warning
 
-# After Reboot
+**This script may break things!**
 
-After reboot you should be presented with the sddm log-in screen. I would open konsole and run a quick 'sudo apt auto-remove' to clean up the underlying system
+Report any problems you find on this repo. See [Issues](#issues) below for more information.
 
-Enjoy KDE!
+## Setup
 
-Also if you would prefer a much more current KDE Plasma 5 desktop consider running the [Kubuntu Backports ppa](https://kubuntu.org/news/plasma-5-27-lts-for-jammy-22-04-lts-available-via-ppa/) 
+### Pre-requisites
 
+Make sure you have the following:
 
+1. A reliable internet connection to download packages
+2. The latest version of [Pop!_OS] (22.04)
+3. The latest updates, either by running `sudo apt upgrade` or via the Pop Shop
+
+### Running the install
+
+1. Start a terminal session on the target system in one of the following ways:
+
+   * Open a terminal window locally
+   * Connect remotely via SSH or MUSH
+   * For VM environments such as [virt-manager], use a virtual console
+
+3. `cd` to directory you downloaded it to
+4. Run the script
+5. Wait for a few minutes as gdm (Gnome Display Manager) is replaced with sddm
+
+If you aren't running the install remotely, the screen may go black. If this does not resolve after a
+few minutes, you may need to reboot the system by using the power button.
+
+### Cleanup
+
+After rebooting, you should be presented with an sddm log-in screen.
+
+1. (Optional) Clean up old packages to free disk space:
+   
+   1. Open Konsole from the menu at the bottom left of the screen
+   2. Run `sudo apt auto-remove`
+
+2. Enjoy KDE!
+
+## Issues
+
+Pop!_OS offers optimizations other Linux distros do not.
+
+This script may break or interfere with their underlying assumptions.
+
+If you notice a problem or opportunity for improvement, please help fix it! This repo accepts:
+
+* Issue reports 
+* Pull requests
+
+Do not expect support from System76 or the general Pop!_OS community.
+
+## Why?
+
+This script revives an earlier experiment with convering KDE to Pop!_OS. It builds on the contributions of the following:
+
+* [13r0ck](https://github.com/13r0ck) (expertise and mentorship)
+* [DaisyLee](https://github.com/DaisyLee2010) (packaging and ttesting)
+* [dubsyGG](https://dubsy.dev/), (mockups and testing)
+* [pushfoo](https://github.com/pushfoo) (research and testing)
+
+## Later KDE Versions
+
+If you prefer a later KDE Plasma 5 desktop than 5.24, consider running the
+[Kubuntu Backports ppa](https://kubuntu.org/news/plasma-5-27-lts-for-jammy-22-04-lts-available-via-ppa/)
+as follows:
+
+```
 sudo add-apt-repository ppa:kubuntu-ppa/backports-extra && sudo apt full-upgrade -y
+```
 
-
-
-# Issues?
-
-If you run into any issues please do not expect System76 or the greater pop_OS community to be able to help you. This greatly breaks from the main pop_OS distribution.
-If you would like to help with this script, or know how to solve some of the paper cuts with the install I welcome any advice or PRs
+In addition to breaking things the same way this script might, it may also introduce
+further changes.

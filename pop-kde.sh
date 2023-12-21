@@ -36,7 +36,7 @@ sudo apt remove -y \
   
 # Install System76 packages
 sudo apt install -y \
-  system76-wallpapers system76-pop-theme system76-pop-fonts system76-firmware pop-shop  
+  system76-wallpapers system76-pop-theme system76-pop-fonts system76-firmware pop-shop system76-scheduler 
   
   # Reboot the system
 sudo reboot

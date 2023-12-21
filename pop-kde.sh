@@ -7,9 +7,6 @@ if [[ ! $REPLY =~ ^[Yy]$ ]]; then
   exit 1
 fi
 
-# Add the PPA
-sudo add-apt-repository ppa:kubuntu-ppa/backports-extra | sudo tee /dev/null > /dev/null
-
 # Update package lists for latest information
 sudo apt update
 

@@ -8,13 +8,10 @@ if [[ ! $REPLY =~ ^[Yy]$ ]]; then
 fi
 
 # Add the PPA
-sudo add-apt-repository ppa:kubuntu-ppa/backports-extra
+sudo add-apt-repository ppa:kubuntu-ppa/backports-extra | sudo tee /dev/null > /dev/null
 
 # Update package lists for latest information
 sudo apt update
-
-# Remove pop-desktop (including essential packages)
-sudo apt remove pop-desktop --allow-remove-essential
 
 # Install the packages
 sudo apt install -y \
@@ -28,6 +25,9 @@ sudo apt install -y \
   libreoffice-qt5 libreoffice-plasma plasma-browser-integration kwin-bismuth \
   kmenuedit okular gwenview kdeconnect
 
+# Remove pop-desktop (including essential packages)
+sudo apt remove pop-desktop --allow-remove-essential
+
 # Uninstall GNOME packages
 sudo apt remove -y \
   baobab eog evince geary gedit gnome-calculator gnome-calendar gnome-contacts \
@@ -35,7 +35,7 @@ sudo apt remove -y \
   xdg-desktop-portal-gnome xdg-user-dirs-gtk adwaita-icon-theme-full \
   gnome-control-center gnome-disk-utility gnome-system-monitor gnome-terminal \
   language-selector-gnome nautilus nautilus-sendto network-manager-pptp-gnome \
-  network-manager-openvpn-gnome gdm3 gnome-shell totem seahorse
+  network-manager-openvpn-gnome gnome-shell totem seahorse gdm3 
   
 # Install System76 packages
 sudo apt install -y \

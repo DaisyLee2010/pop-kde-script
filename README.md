@@ -18,6 +18,8 @@ After reboot you should be presented with the sddm log-in screen. I would open k
 Enjoy KDE!
 
 Also if you would prefer a much more current KDE Plasma 5 desktop consider running the [Kubuntu Backports ppa](https://kubuntu.org/news/plasma-5-27-lts-for-jammy-22-04-lts-available-via-ppa/) 
+
+
 sudo add-apt-repository ppa:kubuntu-ppa/backports-extra && sudo apt full-upgrade -y
 
 

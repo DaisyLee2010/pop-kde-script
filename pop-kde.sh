@@ -11,7 +11,7 @@ fi
 sudo apt update
 
 # Install the packages
-sudo apt install --install-recommends -y \
+sudo apt install -y \
   dolphin dolphin-plugins kio-fuse kio-extras kwin-x11 kde-plasma-desktop \
   xdg-desktop-portal-kde xdg-user-dirs ark systemsettings print-manager \
   plasma-widgets-addons plasma-thunderbolt plasma-systemmonitor plasma-runner-installer \

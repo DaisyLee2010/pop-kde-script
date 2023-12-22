@@ -36,7 +36,7 @@ sudo apt remove -y \
   
 # Install System76 packages
 sudo apt install -y \
-  pop-wallpapers pop-fonts system76-firmware pop-shop system76-scheduler 
+  pop-wallpapers pop-fonts system76-firmware pop-shop system76-scheduler firmware-manager
 
 # Copy Pop Wallpapers to KDE location
 sudo cp -r /usr/share/backgrounds/pop /usr/share/wallpapers/

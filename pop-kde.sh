@@ -36,7 +36,16 @@ sudo apt remove -y \
   
 # Install System76 packages
 sudo apt install -y \
-  system76-wallpapers system76-pop-theme system76-pop-fonts system76-firmware pop-shop system76-scheduler 
-  
+  pop-wallpapers pop-fonts system76-firmware pop-shop system76-scheduler 
+
+# Copy Pop Wallpapers to KDE location
+sudo cp -r /usr/share/backgrounds/pop /usr/share/wallpapers/
+
+# Add pop logo to KCM 
+sudo tee /etc/xdg/kcm-about-distrorc > /dev/null << EOF
+[General]
+LogoPath=/usr/share/icons/pop-os-branding/256x256/apps/ubuntu-logo-icon
+EOF
+
   # Reboot the system
 sudo reboot

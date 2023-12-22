@@ -49,7 +49,7 @@ After rebooting, you should be presented with an sddm log-in screen.
 1. (Optional) Clean up old packages to free disk space:
    
    1. Open Konsole from the menu at the bottom left of the screen
-   2. Run `sudo apt auto-remove`
+   2. Run `sudo apt autoremove`
 
 2. Enjoy KDE!
 
@@ -71,7 +71,7 @@ Do not expect support from System76 or the general Pop!_OS community.
 This script revives an earlier experiment with convering KDE to Pop!_OS. It builds on the contributions of the following:
 
 * [13r0ck](https://github.com/13r0ck) (expertise and mentorship)
-* [DaisyLee](https://github.com/DaisyLee2010) (packaging and ttesting)
+* [DaisyLee](https://github.com/DaisyLee2010) (packaging and testing)
 * [dubsyGG](https://dubsy.dev/), (mockups and testing)
 * [pushfoo](https://github.com/pushfoo) (research and testing)
 

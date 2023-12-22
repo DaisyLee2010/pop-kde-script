@@ -77,6 +77,9 @@ This script revives an earlier experiment with convering KDE to Pop!_OS. It buil
 
 ## Later KDE Versions
 
+This currently does not work and **will** break you system completely.
+Looking for help trying to solve this. 
+
 If you prefer a later KDE Plasma 5 desktop than 5.24, consider running the
 [Kubuntu Backports ppa](https://kubuntu.org/news/plasma-5-27-lts-for-jammy-22-04-lts-available-via-ppa/)
 as follows:

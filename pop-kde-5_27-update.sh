@@ -51,12 +51,3 @@ echo "Priorities in /etc/apt/preferences.d/ files adjusted back to original valu
 
 # Print a message about potential reboot
 echo "To ensure all changes take effect, it's recommended to reboot your system."
-
-# Prompt for reboot
-read -p "Would you like to reboot now? (y/n): " answer
-
-if [[ $answer =~ ^[Yy]$ ]]; then
-    # Initiate reboot
-    sudo reboot
-else
-    echo "Reboot postponed. Please remember to reboot at your earliest convenience."

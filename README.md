@@ -68,9 +68,9 @@ Do not expect support from System76 or the general Pop!_OS community.
 
 ## Why?
 
-This script revives an earlier experiment with convering KDE to Pop!_OS. It builds on the contributions of the following:
+These scripts revive an earlier experiment with converting Pop!_OS to use KDE as the default desktop. The project builds on the contributions of the following:
 
-* [13r0ck](https://github.com/13r0ck) (expertise and mentorship)
+* [13r0ck](https://github.com/13r0ck) (mentorship and general expertise)
 * [DaisyLee](https://github.com/DaisyLee2010) (packaging and testing)
 * [dubsyGG](https://dubsy.dev/), (mockups and testing)
 * [pushfoo](https://github.com/pushfoo) (research and testing)
